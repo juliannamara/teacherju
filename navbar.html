@@ -1,0 +1,19 @@
+ <!-- Navigation -->
+ <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav"> -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #a377b9 !important;">  
+    <div class="container">
+      <a class="navbar-brand text-light js-scroll-trigger" href="{% url 'index' %}">ZapDido</a>
+      <button class="navbar-toggler text-light navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          {% for title, link in links_navbar.items %}
+            <li class="nav-item">
+              <a class="nav-link text-light js-scroll-trigger" href="{{link}}">{{title}}</a>
+            </li>                      
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
